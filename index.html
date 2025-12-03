@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Seoul Restaurant Menu</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #111;
+        color: #fff;
+    }
+
+    header {
+        text-align: center;
+        padding: 25px 10px;
+        background: linear-gradient(135deg, #ff4d4d, #ff9900);
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    /* MENU CARD GRID */
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card {
+        background: #222;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        transition: transform 0.25s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card-title {
+        padding: 12px;
+        text-align: center;
+        font-weight: 600;
+        background: #1a1a1a;
+        border-top: 1px solid #333;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #000;
+        color: #aaa;
+        margin-top: 30px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>Urban Seoul Restaurant Menu</header>
+
+<div class="menu-container">
+
+    <div class="card">
+        <img src="1MenuCover.jpg" alt="Menu Cover">
+        <div class="card-title">Menu Cover</div>
+    </div>
+
+    <div class="card">
+        <img src="2RiceMealMenu.jpg" alt="Rice Meal Menu">
+        <div class="card-title">Rice Meal Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="3KoreanMenu.jpg" alt="Korean Menu">
+        <div class="card-title">Korean Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="4SamgyMenu.jpg" alt="Samgy Menu">
+        <div class="card-title">Samgy Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="5AppetizerMenu.jpg" alt="Appetizer Menu">
+        <div class="card-title">Appetizer Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="6SaladMenu.jpg" alt="Salad Menu">
+        <div class="card-title">Salad Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="7Drinks.jpg" alt="Drinks">
+        <div class="card-title">Drinks</div>
+    </div>
+
+    <div class="card">
+        <img src="8HangukMenu.jpg" alt="Hanguk Menu">
+        <div class="card-title">Hanguk Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="9IceCreamMenu.jpg" alt="Ice Cream Menu">
+        <div class="card-title">Ice Cream Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="10BucketMenu.jpg" alt="Bucket Menu">
+        <div class="card-title">Bucket Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="11LiqourMenu.jpg" alt="Liquor Menu">
+        <div class="card-title">Liquor Menu</div>
+    </div>
+
+    <div class="card">
+        <img src="12LastPage.jpg" alt="Last Page">
+        <div class="card-title">Last Page</div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Urban Seoul Restaurant • All Rights Reserved
+</footer>
+
+</body>
+</html>
