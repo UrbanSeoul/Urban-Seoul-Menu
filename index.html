@@ -16,19 +16,20 @@
         color: #fff;
     }
 
+    /* TITLE */
     header {
         text-align: center;
         padding: 25px 15px;
         background: orange;
-        color: #00ff66;
+        color: #00ff66; /* green text */
         font-family: 'Russo One', sans-serif;
         font-size: 28px;
         font-weight: 700;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        border-bottom: 4px solid rgba(0,255,100,0.3);
     }
 
+    /* MENU CONTAINER */
     .menu-container {
         padding: 20px;
         display: flex;
@@ -37,12 +38,11 @@
         align-items: center;
     }
 
+    /* MENU CARDS */
     .card {
-        background: rgba(10,10,10,0.8); /* make card slightly transparent */
+        background: #111; /* plain dark card */
         border-radius: 14px;
         overflow: hidden;
-        box-shadow: 0 0 12px #00ff80, 0 0 35px #00ff80 inset;
-        border: 2px solid #00ff80;
         transition: transform 0.25s ease, opacity 0.6s ease;
         cursor: pointer;
         max-width: 500px;
@@ -53,7 +53,6 @@
 
     .card:hover {
         transform: scale(1.02);
-        box-shadow: 0 0 25px #00ff80, 0 0 45px #00ff80 inset;
     }
 
     .card img {
@@ -62,15 +61,17 @@
         border-radius: 12px;
     }
 
+    /* MENU NAMES UNDER IMAGE (PLAIN ORANGE) */
     .card-title {
         padding: 12px;
         text-align: center;
         font-weight: 600;
         font-size: 18px;
-        color: orange;
+        color: orange; /* plain orange font */
         font-family: 'Russo One', sans-serif;
     }
 
+    /* FULLSCREEN VIEWER */
     #viewer {
         position: fixed;
         top: 0;
@@ -95,6 +96,7 @@
         margin: auto;
     }
 
+    /* FOOTER */
     footer {
         text-align: center;
         padding: 20px;
@@ -105,7 +107,6 @@
         letter-spacing: 0.5px;
     }
 </style>
-
 </head>
 <body>
 
