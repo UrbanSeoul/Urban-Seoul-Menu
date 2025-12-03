@@ -19,20 +19,26 @@
 
     /* Normal fixed logo background */
     body::before {
-        content: "";
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        background-image: url('logo.png'); /* your logo */
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain; /* fits screen */
-        z-index: 0;
-        pointer-events: none;
-    }
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+
+    /* GRAY BACKGROUND */
+    background-color: #2e2e2e; /* nice soft gray */
+
+    /* LOGO */
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    z-index: 0;
+    pointer-events: none;
+}
 
     /* TITLE */
     header {
