@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Urban Seoul Restaurant Menu</title>
 
 <style>
     body {
         margin: 0;
-        font-family: "Poppins", sans-serif;
+        font-family: Arial, sans-serif;
         background: linear-gradient(180deg, #000000, #003300);
-        color: #ffffff;
-        text-align: center;
-        padding: 20px;
+        color: #fff;
     }
 
     /* TITLE */
-    h1 {
-        font-size: 34px;
-        font-weight: 900;
+    header {
+        text-align: center;
+        padding: 35px 15px;
+        background: #000;
         color: #00ff66;
-        text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66;
-        margin-bottom: 25px;
+        font-family: 'Jua', sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px rgba(0,255,150,0.7), 
+                     0 0 20px rgba(0,255,100,0.5);
+        border-bottom: 4px solid rgba(0,255,100,0.3);
     }
 
-    /* MENU GRID */
-    .menu-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
-        padding-bottom: 40px;
+    /* MENU CARDS (Scroll Down) */
+    .menu-container {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
     }
 
-    /* NEON BORDER CARDS */
-    .menu-card {
+    .card {
         background: #0a0a0a;
-        border-radius: 15px;
-        padding: 10px;
-        cursor: pointer;
-        border: 2px solid #00ff80;
+        border-radius: 14px;
+        overflow: hidden;
         box-shadow: 0 0 12px #00ff80, 0 0 35px #00ff80 inset;
-        transition: 0.3s;
+        border: 2px solid #00ff80;
+        transition: transform 0.25s ease;
+        cursor: pointer;
+        max-width: 500px;
+        width: 90%;
     }
 
-    .menu-card:hover {
-        transform: scale(1.05);
+    .card:hover {
+        transform: scale(1.02);
         box-shadow: 0 0 25px #00ff80, 0 0 45px #00ff80 inset;
     }
 
-    .menu-card img {
+    .card img {
         width: 100%;
-        border-radius: 10px;
+        display: block;
+        border-radius: 12px;
     }
 
-    /* NAME UNDER IMAGE */
-    .menu-card .name {
-        margin-top: 10px;
-        font-weight: bold;
+    .card-title {
+        padding: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 18px;
         color: #00ff66;
         text-shadow: 0 0 6px #00ff66, 0 0 12px #00ff66;
-        font-size: 16px;
     }
 
     /* FULLSCREEN VIEWER */
@@ -79,84 +88,90 @@
     #viewer img {
         max-width: 95%;
         max-height: 95%;
+        width: auto;
+        height: auto;
         object-fit: contain;
         border-radius: 12px;
+        display: block;
         margin: auto;
     }
 
-    /* FOOTER */
     footer {
-        margin-top: 40px;
+        text-align: center;
+        padding: 20px;
+        background: #000;
+        color: #aaa;
+        margin-top: 30px;
         font-size: 14px;
-        opacity: 0.8;
+        letter-spacing: 0.5px;
     }
 </style>
 
 </head>
 <body>
 
-<h1>Urban Seoul Restaurant Menu</h1>
+<header>Urban Seoul Restaurant Menu</header>
 
-<div class="menu-grid">
+<div class="menu-container">
 
-    <div class="menu-card" onclick="openViewer('1MenuCover.png')">
+    <div class="card" onclick="openViewer('1MenuCover.png')">
         <img src="1MenuCover.png" alt="">
-        <div class="name">Menu Cover</div>
+        <div class="card-title">Menu Cover</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('2RiceMealMenu.png')">
+    <div class="card" onclick="openViewer('2RiceMealMenu.png')">
         <img src="2RiceMealMenu.png" alt="">
-        <div class="name">Rice Meal Menu</div>
+        <div class="card-title">Rice Meal Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('3AppetizerMenu.png')">
+    <div class="card" onclick="openViewer('3AppetizerMenu.png')">
         <img src="3AppetizerMenu.png" alt="">
-        <div class="name">Appetizer Menu</div>
+        <div class="card-title">Appetizer Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('4KoreanMenu.png')">
+    <div class="card" onclick="openViewer('4KoreanMenu.png')">
         <img src="4KoreanMenu.png" alt="">
-        <div class="name">Korean Menu</div>
+        <div class="card-title">Korean Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('5SaladMenu.png')">
+    <div class="card" onclick="openViewer('5SaladMenu.png')">
         <img src="5SaladMenu.png" alt="">
-        <div class="name">Salad Menu</div>
+        <div class="card-title">Salad Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('6AllYouCanEat.png')">
+    <div class="card" onclick="openViewer('6AllYouCanEat.png')">
         <img src="6AllYouCanEat.png" alt="">
-        <div class="name">All You Can Eat</div>
+        <div class="card-title">All You Can Eat</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('7Drinks.png')">
+    <div class="card" onclick="openViewer('7Drinks.png')">
         <img src="7Drinks.png" alt="">
-        <div class="name">Drinks</div>
+        <div class="card-title">Drinks</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('8IceCreamMenu.png')">
+    <div class="card" onclick="openViewer('8IceCreamMenu.png')">
         <img src="8IceCreamMenu.png" alt="">
-        <div class="name">Ice Cream Menu</div>
+        <div class="card-title">Ice Cream Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('9LiqourMenu.png')">
+    <div class="card" onclick="openViewer('9LiqourMenu.png')">
         <img src="9LiqourMenu.png" alt="">
-        <div class="name">Liquor Menu</div>
+        <div class="card-title">Liquor Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('10BucketMenu.png')">
+    <div class="card" onclick="openViewer('10BucketMenu.png')">
         <img src="10BucketMenu.png" alt="">
-        <div class="name">Bucket Menu</div>
+        <div class="card-title">Bucket Menu</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('11KoreanProduct.png')">
+    <div class="card" onclick="openViewer('11KoreanProduct.png')">
         <img src="11KoreanProduct.png" alt="">
-        <div class="name">Korean Product</div>
+        <div class="card-title">Korean Product</div>
     </div>
 
-    <div class="menu-card" onclick="openViewer('12LastPage.png')">
+    <div class="card" onclick="openViewer('12LastPage.png')">
         <img src="12LastPage.png" alt="">
-        <div class="name">Last Page</div>
+        <div class="card-title">Last Page</div>
     </div>
 
 </div>
@@ -170,12 +185,12 @@
 
 <script>
 function openViewer(image) {
-    document.getElementById("viewerImage").src = image;
-    document.getElementById("viewer").style.display = "flex";
+    document.getElementById('viewerImage').src = image;
+    document.getElementById('viewer').style.display = 'flex';
 }
 
 function closeViewer() {
-    document.getElementById("viewer").style.display = "none";
+    document.getElementById('viewer').style.display = 'none';
 }
 </script>
 
