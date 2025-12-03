@@ -10,17 +10,17 @@
         margin: 0;
         font-family: "Poppins", sans-serif;
         background: linear-gradient(180deg, #000000, #003300);
-        color: #fff;
+        color: #ffffff;
         text-align: center;
         padding: 20px;
     }
 
-    /* TITLE STYLE */
+    /* TITLE */
     h1 {
         font-size: 34px;
         font-weight: 900;
-        color: #3cff6a;
-        text-shadow: 0 0 15px #28ff63, 0 0 25px #1aff50;
+        color: #00ff66;
+        text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66;
         margin-bottom: 25px;
     }
 
@@ -32,21 +32,20 @@
         padding-bottom: 40px;
     }
 
-    /* MENU CARDS WITH K-NEON BORDER */
+    /* NEON BORDER CARDS */
     .menu-card {
         background: #0a0a0a;
         border-radius: 15px;
-        overflow: hidden;
         padding: 10px;
         cursor: pointer;
+        border: 2px solid #00ff80;
+        box-shadow: 0 0 12px #00ff80, 0 0 35px #00ff80 inset;
         transition: 0.3s;
-        border: 2px solid #0f0;
-        box-shadow: 0 0 10px #0f0, 0 0 30px #0f0 inset;
     }
 
     .menu-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 20px #00ff80, 0 0 40px #00ff80;
+        box-shadow: 0 0 25px #00ff80, 0 0 45px #00ff80 inset;
     }
 
     .menu-card img {
@@ -91,7 +90,7 @@
 
 <div class="menu-grid">
 
-    <!-- Updated PNG Image Order -->
+    <!-- Updated Image Names -->
     <div class="menu-card" onclick="openViewer('1MenuCover.png')">
         <img src="1MenuCover.png" alt="">
     </div>
@@ -120,8 +119,8 @@
         <img src="7Drinks.png" alt="">
     </div>
 
-    <div class="menu-card" onclick="openViewer('11HangukMenu.png')">
-        <img src="11HangukMenu.png" alt="">
+    <div class="menu-card" onclick="openViewer('11KoreanProduct.png')">
+        <img src="11KoreanProduct.png" alt="">
     </div>
 
     <div class="menu-card" onclick="openViewer('8IceCreamMenu.png')">
@@ -142,7 +141,7 @@
 
 </div>
 
-<!-- Fullscreen Viewer -->
+<!-- Viewer -->
 <div id="viewer" onclick="closeViewer()">
     <img id="viewerImage" src="">
 </div>
