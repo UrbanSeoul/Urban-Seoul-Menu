@@ -10,11 +10,19 @@
 
 <style>
     body {
-        margin: 0;
-        font-family: 'Gowun Dodum', Arial, sans-serif;
-        background-color: #000; /* pitch black background */
-        color: #fff;
-    }
+    margin: 0;
+    font-family: 'Gowun Dodum', Arial, sans-serif;
+    background-color: #000; /* pitch black */
+    color: #fff;
+
+    /* Fixed background logo */
+    background-image: url('logo.png'); /* make sure logo.png is in the same folder or adjust path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* or cover if you want full-screen */
+    background-attachment: fixed;
+    opacity: 1;
+}
 
     /* TITLE */
     header {
