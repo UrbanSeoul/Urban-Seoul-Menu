@@ -18,7 +18,7 @@
         color: #fff;
     }
 
-    /* NEW FANCY TITLE */
+    /* NEW TITLE */
     header {
         text-align: center;
         padding: 35px 15px;
@@ -35,7 +35,7 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
-    /* MENU CARD GRID */
+    /* GRID */
     .menu-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -80,6 +80,33 @@
         font-size: 14px;
         letter-spacing: 0.5px;
     }
+
+    /* FULLSCREEN VIEWER */
+    #viewer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 9999;
+        animation: fadeIn 0.3s ease;
+    }
+
+    #viewer img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 </style>
 
 </head>
@@ -90,62 +117,62 @@
 
 <div class="menu-container">
 
-    <div class="card">
+    <div class="card" onclick="openViewer('1MenuCover.png')">
         <img src="1MenuCover.png" alt="Menu Cover">
         <div class="card-title">Menu Cover</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('2RiceMealMenu.png')">
         <img src="2RiceMealMenu.png" alt="Rice Meal Menu">
         <div class="card-title">Rice Meal Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('3KoreanMenu.png')">
         <img src="3KoreanMenu.png" alt="Korean Menu">
         <div class="card-title">Korean Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('4SamgyMenu.png')">
         <img src="4SamgyMenu.png" alt="Samgy Menu">
         <div class="card-title">Samgy Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('5AppetizerMenu.png')">
         <img src="5AppetizerMenu.png" alt="Appetizer Menu">
         <div class="card-title">Appetizer Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('6SaladMenu.png')">
         <img src="6SaladMenu.png" alt="Salad Menu">
         <div class="card-title">Salad Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('7Drinks.png')">
         <img src="7Drinks.png" alt="Drinks">
         <div class="card-title">Drinks</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('8HangukMenu.png')">
         <img src="8HangukMenu.png" alt="Hanguk Menu">
         <div class="card-title">Hanguk Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('9IceCreamMenu.png')">
         <img src="9IceCreamMenu.png" alt="Ice Cream Menu">
         <div class="card-title">Ice Cream Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('10BucketMenu.png')">
         <img src="10BucketMenu.png" alt="Bucket Menu">
         <div class="card-title">Bucket Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('11LiqourMenu.png')">
         <img src="11LiqourMenu.png" alt="Liquor Menu">
         <div class="card-title">Liquor Menu</div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openViewer('12LastPage.png')">
         <img src="12LastPage.png" alt="Last Page">
         <div class="card-title">Last Page</div>
     </div>
@@ -155,6 +182,22 @@
 <footer>
     © 2025 Urban Seoul Restaurant • All Rights Reserved
 </footer>
+
+<!-- FULLSCREEN IMAGE VIEWER -->
+<div id="viewer" onclick="closeViewer()">
+    <img id="viewerImage" src="">
+</div>
+
+<script>
+function openViewer(image) {
+    document.getElementById('viewerImage').src = image;
+    document.getElementById('viewer').style.display = 'flex';
+}
+
+function closeViewer() {
+    document.getElementById('viewer').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
